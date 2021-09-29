@@ -10,7 +10,8 @@ unset GIT_EDITOR
 
 git config --global core.editor "vim"
 git config --global push.default simple
-git config --global commit.gpgsign true
+git config commit.gpsign true
+git config commit.gpgsign true
 
 touch ".dotfiles-loaded"
 echo "Dotfiles loaded"
