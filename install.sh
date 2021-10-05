@@ -9,7 +9,7 @@ set -x
 unset GIT_EDITOR
 
 git config --global core.editor "vim"
-git config --global push.default simple
+git config --global push.default current
 git config commit.gpsign true
 git config commit.gpgsign true
 
