@@ -16,4 +16,4 @@ git config commit.gpgsign true
 touch ".dotfiles-loaded"
 echo "Dotfiles loaded"
 
-source .bash_profile
+source .bashrc
