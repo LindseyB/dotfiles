@@ -16,4 +16,10 @@ git config commit.gpgsign true
 touch ".dotfiles-loaded"
 echo "Dotfiles loaded"
 
-source .bashrc
+# Figure out the absolute path of the dotfiles directory
+DOTFILESDIRREL="$(dirname "$0")"
+cd $DOTFILESDIRREL/..
+DOTFILESDIR="$(pwd -P)"
+
+ln -sf "$DOTFILESDIR" "$HOME/.dotfiles"
+cat "$DOTFILESDIR/.bashrc" >> "$HOME/.bashrc"
