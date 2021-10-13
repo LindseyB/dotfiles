@@ -19,7 +19,7 @@ echo "Dotfiles loaded"
 # Figure out the absolute path of the dotfiles directory
 DOTFILESDIRREL="$(dirname "$0")"
 cd $DOTFILESDIRREL/..
-DOTFILESDIR="$(pwd -P)"
+DOTFILESDIR="$(pwd -P)/dotfiles"
 
 ln -sf "$DOTFILESDIR" "$HOME/.dotfiles"
 cat "$DOTFILESDIR/.bashrc" >> "$HOME/.bashrc"
