@@ -1,6 +1,10 @@
 alias git-scrub='git branch --merged | grep -v master | xargs git branch -d'
 alias fuck-12='bin/rubocop -A'
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
