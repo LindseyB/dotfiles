@@ -1,9 +1,6 @@
 alias git-scrub='git branch --merged | grep -v master | xargs git branch -d'
 alias fuck-12='bin/rubocop -A $(git diff --name-only master..HEAD)'
 alias test='bin/rails t -p'
-alias memex-seed='/workspaces/github/bin/seed memex_projects --p50'
-alias playwright='npm run test:playwright:chromium -w @github-ui/memex --'
-alias jest='npm run test -w @github-ui/memex --'
 alias sorbet-it='bin/rake db:migrate db:test:prepare; ./bin/tapioca dsl'
 
 if [ -f ~/.git-completion.bash ]; then
